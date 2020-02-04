@@ -9,22 +9,22 @@
 Validation and inference part needs to be reworked
 
 ### TODO-MUST:
- ~~Parse video to open pose vectors~~ 
- ~~Transform open pose vectors to numpy~~
- ~~Prepare model and traing process~~
-  Infer model with apropriate cost function
-  Combine result with output video for presentation
+ ~~Parse video to open pose vectors~~ <br>
+ ~~Transform open pose vectors to numpy~~<br>
+ ~~Prepare model and traing process~~<br>
+  Infer model with apropriate cost function<br>
+  Combine result with output video for presentation<br>
 
  ### TODO-Good to do:
- Get more data
- Prepare process how to train and improve model iterativelly
- Prepare POC of validation set 
- Create POC for model combination with different models
+ Get more data<br>
+ Prepare process how to train and improve model iterativelly<br>
+ Prepare POC of validation set <br>
+ Create POC for model combination with different models<br>
  
 ### Questions
-Would it be good to use distance to all points instead of coordinates?
-Is there possibility to combine different models for better results like in inception networks?
-How much overhead will OpenPose mean, how much should we optimize inference?
+Would it be good to use distance to all points instead of coordinates?<br>
+Is there possibility to combine different models for better results like in inception networks?<br>
+How much overhead will OpenPose mean, how much should we optimize inference?<br>
 
  
  
