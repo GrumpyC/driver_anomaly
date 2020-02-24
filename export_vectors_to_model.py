@@ -11,15 +11,17 @@ def generate_open_pose_params():
     params = dict()
     params["logging_level"] = 3
     params["model_pose"] = "BODY_25"
+    params["model_folder"] = "../../../models/"
     params["alpha_pose"] = 0.6
     params["scale_gap"] = 0.3
+    params["keypoint_scale"] = 3
     params["scale_number"] = 1
     params["process_real_time"] = True
     params["disable_blending"] = False
 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-cap = cv2.VideoCapture('./resources/video/wide-2.avi')
+cap = cv2.VideoCapture('./resources/video/video_104.avi')
 
 generate_open_pose_params()
 opWrapper = op.WrapperPython()
@@ -61,4 +63,4 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-np.save('./resources/model/wide-2.npy', np.array(result))
+np.save('./resources/model/video_104.npy', np.array(result))
