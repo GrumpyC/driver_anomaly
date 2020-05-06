@@ -6,8 +6,6 @@ import traceback
 import numpy as np
 from tensorflow_core.python.keras.layers.core import RepeatVector, Dense
 from tensorflow_core.python.keras.layers.normalization import LayerNormalization
-
-import tensorflow as tf
 import tensorflow_core as tfc
 
 from tensorflow_core.python.keras.layers.recurrent import LSTM
@@ -17,7 +15,7 @@ from tensorflow_core.python.client import device_lib
 import os, os.path
 
 MODEL_PATH = 'resources/data/generated_model'
-TRAINING_SET_PATH = './resources/model/video_104.npy'
+TRAINING_SET_PATH = './resources/model/video_104_small.npy'
 BATCH_SIZE = 4096
 EPOCHS = 300
 CHECKPOINT_PATH='resources/trained/'
@@ -63,8 +61,8 @@ def get_model(reload_model=True):
 
 
 try:
- #   print(device_lib.list_local_devices())
-  #  print(tfc.test.is_gpu_available())
+    print(device_lib.list_local_devices())
+    print(tfc.test.is_gpu_available())
 
     training_set = get_training_set()
 

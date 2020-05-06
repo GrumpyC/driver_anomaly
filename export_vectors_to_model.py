@@ -42,7 +42,8 @@ while True:
         opWrapper.emplaceAndPop([datum])
 
         # Display Image
-        points_of_interest = np.vstack((datum.poseKeypoints[0][0:10], datum.poseKeypoints[0][12], datum.poseKeypoints[0][15:19]))
+#        points_of_interest = np.vstack((datum.poseKeypoints[0][0:10], datum.poseKeypoints[0][12], datum.poseKeypoints[0][15:19]))
+        points_of_interest = np.vstack((datum.poseKeypoints[0][0:8], datum.poseKeypoints[0][15], datum.poseKeypoints[0][16]))
         result.append(points_of_interest)
 
         #TODO Uncomment this part if you need to test
@@ -63,4 +64,4 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-np.save('./resources/model/video_104.npy', np.array(result))
+np.save('./resources/model/video_104_small.npy', np.array(result))
